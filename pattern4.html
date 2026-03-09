@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>
+        <center>Pattern :- Full Pyramid</center>
+    </h1>
+    <script>
+
+        for (let i = 1; i <= 5; i++) {
+
+            let star = "";
+
+            for (let s = 1; s <= 5 - i; s++) {
+                star = star + " ";
+            }
+
+            for (let j = 1; j <= 2 * i - 1; j++) {
+                star = star + "*";
+            }
+
+            console.log(star);
+        }
+
+    </script>
+</body>
+</html>
