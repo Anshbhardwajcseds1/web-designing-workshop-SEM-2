@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>Prime Number Checker</h3>
+
+<input type="number" id="num">
+<button onclick="checkPrime()">Check</button>
+
+
+<p id="result"></p>
+
+<script>
+function checkPrime() {
+    var num = document.getElementById("num").value;
+    var i;
+
+    if (num <= 1) {
+        document.getElementById("result").innerHTML = "Not Prime";
+        return;
+    }
+
+    for (i = 2; i < num; i++) {
+        if (num % i == 0) {
+            document.getElementById("result").innerHTML = "Not Prime";
+            return;
+        }
+    }
+
+    document.getElementById("result").innerHTML = "Prime";
+}
+</script>
+
+</body>
+</html>
