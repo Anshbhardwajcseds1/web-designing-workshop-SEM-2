@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Counter</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            margin: 5px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .inc {
+            background-color: rgb(58, 102, 221);
+        }
+
+        .dec {
+            background-color: rgb(58, 102, 221);
+        }
+
+        .reset {
+            background-color: rgb(58, 102, 221);
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function App() {
+            const [count, setCount] = React.useState(0);
+
+            return (
+                <div className="container">
+                    <h1>Counter App</h1>
+                    <h2>{count}</h2>
+
+                    <button className="btn inc" onClick={() => setCount(count + 1)}>
+                        Increment
+                    </button>
+
+                    <button className="btn dec" onClick={() => setCount(count - 1)}>
+                        Decrement
+                    </button>
+
+                    <button className="btn reset" onClick={() => setCount(0)}>
+                        Reset
+                    </button>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
