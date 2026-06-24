@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Prime Check</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Student Result Calculator</title>
+    <link rel="stylesheet" href="practical.css">
 </head>
+
 <body>
 
-<h3>Prime Number Checker</h3>
+    <div class="container">
+        <h2>Student Result Calculator</h2>
 
-<input type="number" id="num">
-<button onclick="checkPrime()">Check</button>
+        <input type="number" id="sub1" placeholder="Subject 1 Marks"><br><br>
+        <input type="number" id="sub2" placeholder="Subject 2 Marks"><br><br>
+        <input type="number" id="sub3" placeholder="Subject 3 Marks"><br><br>
+        <input type="number" id="sub4" placeholder="Subject 4 Marks"><br><br>
 
+        <button onclick="calculate()">Show Result</button>
 
-<p id="result"></p>
+        <div id="result"></div>
+    </div>
 
-<script>
-function checkPrime() {
-    var num = document.getElementById("num").value;
-    var i;
-
-    if (num <= 1) {
-        document.getElementById("result").innerHTML = "Not Prime";
-        return;
-    }
-
-    for (i = 2; i < num; i++) {
-        if (num % i == 0) {
-            document.getElementById("result").innerHTML = "Not Prime";
-            return;
-        }
-    }
-
-    document.getElementById("result").innerHTML = "Prime";
-}
-</script>
+    <script src="practical.js"></script>
 
 </body>
+
 </html>
