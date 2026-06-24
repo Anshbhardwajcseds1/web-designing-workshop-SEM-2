@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+.hero {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+    font-size: 1.1rem;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    width: 300px;
+    max-width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #dd2476;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart {
+    width: min(90%, 500px);
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    color: #dd2476;
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style: none;
+}
+
+.cart li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 0 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.card button {
+    margin: 15px 10px;
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff512f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #dd2476;
+}
+
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .food-container {
+        padding: 15px;
+    }
+}
