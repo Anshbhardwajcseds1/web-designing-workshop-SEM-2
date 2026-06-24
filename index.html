@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies - Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>🍔 Foodies</h1>
+        <p>Order your favorite food anytime, anywhere</p>
+
+        <div class="search-box">
+            <input type="text" id="searchBox" placeholder="Search Food...">
+            <button onclick="searchFood()">Search</button>
+        </div>
+    </header>
+
+    <section class="cart">
+        <h2>🛒 My Cart</h2>
+        <ul id="cartItems"></ul>
+        <h3>Total: ₹<span id="total">0</span></h3>
+    </section>
+
+    <section class="food-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>₹299</p>
+            <button onclick="addToCart('Pizza',299)">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Burger">
+            <h3>Burger</h3>
+            <p>₹149</p>
+            <button onclick="addToCart('Burger',149)">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=800" alt="Biryani">
+            <h3>Biryani</h3>
+            <p>₹249</p>
+            <button onclick="addToCart('Biryani',249)">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=800" alt="Pasta">
+            <h3>Pasta</h3>
+            <p>₹199</p>
+            <button onclick="addToCart('Pasta',199)">Add To Cart</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Foodies | Food Delivery Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
